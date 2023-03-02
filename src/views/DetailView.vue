@@ -21,7 +21,7 @@
       Back
     </router-link>
 
-    <TodoListItems v-model="filteredItems"/>
+    <TodoListItems v-model="filteredItems" :is-detail="true"/>
   </div>
 </template>
 

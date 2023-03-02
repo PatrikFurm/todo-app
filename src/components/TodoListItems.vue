@@ -36,7 +36,7 @@
     </li>
 
     <li
-      v-if="dataValue.length > 1"
+      v-if="!isDetail"
       class="todo-list-item-add"
     >
       <AddNewItem/>
@@ -61,7 +61,11 @@ const props = defineProps({
   modelValue: {
     type: Object,
     required: true
-  }
+  },
+  isDetail: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 /**
