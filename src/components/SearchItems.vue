@@ -1,7 +1,7 @@
 <template>
-  <div class="search-items position-relative d-inline-block">
+  <div class="search-items position-relative d-inline-block w-100">
     <input
-      class="input"
+      class="input w-100"
       type="text"
       placeholder="Search"
       v-model="searchQuery"

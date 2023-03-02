@@ -1,9 +1,11 @@
 <template>
 
-  <div class="d-flex">
-    <SearchItems @searchQueryChanged="search = $event"/>
+  <div class="row">
+    <div class="col-lg-4 mb-2">
+      <SearchItems @searchQueryChanged="search = $event"/>
+    </div>
 
-    <div class="ms-4">
+    <div class="col-lg-4 mb-2">
       Filter:
       <select v-model="filterDoneActiveAll">
         <option :value="[true, false]">All</option>
@@ -12,7 +14,7 @@
       </select>
     </div>
 
-    <div class="ms-4">
+    <div class="col-lg-4  mb-2">
       Sort:
       <select v-model="sort">
         <option :value="(a, b) => 0">Default</option>
