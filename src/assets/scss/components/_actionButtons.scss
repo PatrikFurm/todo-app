@@ -1,0 +1,28 @@
+.action-buttons {
+  width: toRem(110);
+
+  &-item {
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      color: $danger
+    }
+
+
+    &--loading {
+      cursor: default !important;
+      color: $primary !important;
+      animation: rotation 1.5s infinite linear;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

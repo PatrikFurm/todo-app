@@ -1,0 +1,84 @@
+.todo-list {
+
+  &--child {
+    font-size: $font-size-sm !important;
+  }
+
+  &-item {
+    &--inner {
+      padding: toRem(5) toRem(10);
+      transition: $transition-base;
+
+      &:hover {
+        background-color: rgba(#3b3d42, .5);
+      }
+    }
+
+    &-loading {
+      left: 50%;
+      top: -20px
+    }
+
+    &-header {
+      &-link {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      &--done {
+        color: $gray-500 !important;
+        text-decoration: line-through;
+      }
+    }
+
+    &-desc {
+      font-size: toRem(12);
+      color: $gray-500;
+    }
+
+    &-deadline {
+      font-size: toRem(12);
+
+      &-delete {
+        font-size: toRem(14);
+        cursor: pointer;
+        transition: $transition-base;
+
+        &:hover {
+          color: $danger;
+        }
+      }
+    }
+
+    &-add {
+      cursor: pointer;
+      transition: $transition-base;
+
+      &--child {
+        font-size: toRem(14);
+      }
+
+      svg {
+        font-size: toRem(28);
+      }
+
+      &:hover {
+        color: $danger;
+      }
+    }
+
+    &-toggle-height {
+      left: toRem(-28);
+      cursor: pointer;
+      transition: $transition-base;
+
+      &:hover {
+        color: $danger;
+      }
+
+      &--active {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
